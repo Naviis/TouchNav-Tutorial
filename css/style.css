@@ -1,3 +1,55 @@
 body{
-	background: #90d9f7 ;
+	padding: 0;
+	margin: 0;
+	background: #90d9f7;
+	font-family: "Open Sans";
+	font-size: 20px;
+}
+
+*{box-sizing: border-box;}
+
+.wrapper{
+	position: relative;
+	min-height: 100%;
+	width: 100%;
+	overflow-x: hidden;
+}
+
+.mask{
+	position: fixed;
+	top: 0;
+	width: 10%;
+	height: 100%;
+	background: rgba(0,0,0,.7);
+	z-index: 10;
+}
+
+.mask-right{right:0;}
+.mask-left{left:0;}
+
+article{
+	position: absolute;
+	min-height: 100%;
+	width: 80%;
+	padding: 20px;
+
+	color: #fff;
+
+	transition: all ease .3s;
+}
+
+article.main{
+	left: 10%;
+}
+
+article.previous{
+	left: -70%;
+}
+
+article.next{
+	left: 90%;
+}
+
+article h3{
+	font-size: 40px;
 }
